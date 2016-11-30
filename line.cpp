@@ -24,3 +24,19 @@ this->c2 = c2;
 this->k1 = k1;
 this->k2 = k2;
 }
+
+bool line::perpend()
+{
+    y1 = k1 * x + c1;
+    y2 = k2 * x + c2;
+     if(k1 * k2 == -1)
+         cout << "perpend" << endl;
+        else cout << " ne perpend" << endl;
+
+}
+
+void printValue(line &lin)
+{
+    cout << "k1=" lin.k1 << '\t' << "k2=" << lin.k2 << endl;
+    lin.perpend();
+}

@@ -37,6 +37,6 @@ bool line::perpend()
 
 void printValue(line &lin)
 {
-    cout << "k1=" lin.k1 << '\t' << "k2=" << lin.k2 << endl;
+    cout << "k1=" << lin.k1 << '\t' << "k2=" << lin.k2 << endl;
     lin.perpend();
 }

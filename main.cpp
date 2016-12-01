@@ -8,11 +8,14 @@ void Case(line *lin1, line *lin2)
     printValue(*lin1);
     cout << "line 2: ";
     printValue(*lin2);
+    if (lin1->perpend(*lin2))
+        cout << "perpendicular";
+        else cout << "not perpendicular";
 }
 int main()
 {
-    line *lin1 = new line(2, 8, 8, 3);
-    line *lin2 = new line(2, -8, 8, -3);
+    line *lin1 = new line(2, 8);
+    line *lin2 = new line(8, 3);
     cout << "Case 1:" << endl;
     Case(lin1, lin2);
     cout << endl;
@@ -20,15 +23,14 @@ int main()
     delete lin1;
     delete lin2;
 
-    lin1 = new line(1, -1, 2, 3);
-    lin2 = new line(1, -5, -5, 5);
+    lin1 = new line(1, -1);
+    lin2 = new line(-1, -5);
     cout << "Case 1:" << endl;
     Case(lin1, lin2);
     cout << endl;
 
     delete lin1;
     delete lin2;
-    /*line a(2, 8, 8, 3);
-    printValue(a);*/
+
     return 0;
 }

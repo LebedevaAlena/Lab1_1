@@ -4,18 +4,19 @@
 
 class line
 {
-    public:
+   public:
         line();
-        line(double k1, double k2, double c1, double c2);
+        line(double k, double c);
         virtual ~line();
-        void setValue(double k1, double k2, double c1, double c2);
-        friend void printValue(line &lin);
-        bool perpend();
+        line(line &lin);
+        bool perpend(line &lin);
 
+        double Perpendicular(double k1, double c1, double k2, double c2);
     protected:
 
     private:
-        double y1, y2, k1, k2, c1, c2, x;
+        double k, c;
+        friend void printValue(line &lin);
 };
 
 #endif // LINE_H
